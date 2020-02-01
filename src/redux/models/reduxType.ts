@@ -1,1 +1,1 @@
-export type ReduxType = string;
+export type ReduxType = string

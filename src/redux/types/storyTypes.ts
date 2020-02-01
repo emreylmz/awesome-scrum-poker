@@ -1,3 +1,3 @@
 import { ReduxType } from '../models'
 
-export const TRIAL: ReduxType = 'TRIAL';
+export const TRIAL: ReduxType = 'TRIAL'

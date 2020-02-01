@@ -1,2 +1,2 @@
-export * from './reduxAction';
-export * from './reduxType';
+export * from './reduxAction'
+export * from './reduxType'
