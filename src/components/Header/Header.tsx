@@ -1,21 +1,10 @@
 import React from 'react'
+import { Render } from '../../types'
 
-interface Props {
-
-}
-
-interface State {
-
-}
-
-class Header extends React.PureComponent<Props, State> {
-  render() {
-    return (
-      <h1></h1>
-    );
+class Header extends React.PureComponent {
+  render(): Render {
+    return <h1 className={'title'}>Awesome Scrum Poker</h1>
   }
 }
 
-export type HeaderProps = Props;
-export type HeaderState = State;
-export default Header;
+export default Header

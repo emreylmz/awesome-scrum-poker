@@ -1,2 +1,2 @@
-export { default as routes } from './routes';
-export * from './routeModel';
+export { default as routes } from './routes'
+export * from './routeModel'
