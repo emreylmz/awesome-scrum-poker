@@ -1,0 +1,33 @@
+@import "../../styles/colors";
+@import "../../styles/metrics";
+
+.active-story {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+  border: $default-border-width solid $primary-color;
+  padding: $default-margin;
+  border-radius: $default-border-radius;
+  margin: $default-margin;
+
+  &__points-container {
+    display: flex;
+    flex-wrap: wrap;
+    .button {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+      margin: $default-margin;
+      padding: $default-margin;
+      border: $default-border-width solid $primary-color;
+      border-radius: $default-border-radius;
+
+      &.selected {
+        border-color: $secondary-color;
+      }
+    }
+  }
+}

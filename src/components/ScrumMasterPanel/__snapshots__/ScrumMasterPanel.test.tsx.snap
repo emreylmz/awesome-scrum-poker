@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scrum Master Panel UI should render correctly 1`] = `ShallowWrapper {}`;

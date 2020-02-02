@@ -1,0 +1,28 @@
+@import "../../../styles/colors";
+@import "../../../styles/metrics";
+
+.story-list-item {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-content: space-around;
+
+  padding: $default-margin;
+
+  &__name {
+    display: flex;
+    flex: 1;
+  }
+
+  &__point {
+    display: flex;
+    flex: 1;
+
+  }
+
+  &__status {
+    display: flex;
+    flex: 1;
+
+  }
+}

@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux'
-import { SessionReducer } from './sessionReducer'
+import { SprintReducer } from './sprintReducer'
 import { StoryReducer } from './storyReducer'
 
-export default combineReducers({
-  SessionReducer,
+const rootReducer = combineReducers({
+  SprintReducer,
   StoryReducer
 })
+
+export type RootState = ReturnType<typeof rootReducer>
+export default rootReducer

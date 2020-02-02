@@ -1,10 +1,21 @@
 import React from 'react'
 import { Render } from '../../types'
+import './Header.scss'
 
-class Header extends React.PureComponent {
+interface Props {
+  title: string
+}
+
+class Header extends React.PureComponent<Props> {
   render(): Render {
-    return <h1 className={'title'}>Awesome Scrum Poker</h1>
+    const { title } = this.props
+    return (
+      <div className={'header'}>
+        <h1 className={'header__title'}>{title}</h1>
+      </div>
+    )
   }
 }
 
+export type HeaderProps = Props
 export default Header

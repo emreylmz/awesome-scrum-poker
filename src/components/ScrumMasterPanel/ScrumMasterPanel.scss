@@ -1,0 +1,48 @@
+@import "../../styles/colors";
+@import "../../styles/metrics";
+
+.scrum-master-panel {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+  border: $default-border-width solid $primary-color;
+  padding: $default-margin;
+  border-radius: $default-border-radius;
+  margin: $default-margin;
+
+  &__title {
+
+  }
+
+  .voters-container {
+    display: flex;
+    align-self: stretch;
+
+    .voter-line {
+      display: flex;
+      align-items: center;
+
+      .voter-name {
+        flex: 2;
+
+        &::after {
+          content: ':';
+        }
+      }
+
+      .voter-point {
+        flex: 1;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+
+
+  .button {
+    display: flex;
+    align-items: flex-end;
+  }
+
+}
