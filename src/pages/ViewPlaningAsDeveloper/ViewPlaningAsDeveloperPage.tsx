@@ -5,6 +5,7 @@ import Redux, { bindActionCreators } from 'redux'
 import { ActiveStory, StoryList } from '../../components'
 import { Sprint } from '../../models'
 import { getSession } from '../../redux/actions/sprintActions'
+import { RootState } from '../../redux/reducers'
 import { Render } from '../../types'
 import { constants } from '../../utils'
 import './ViewPlaningAsDeveloperPage.scss'
@@ -22,6 +23,7 @@ type Props = StateProps & DispatchProps & RouteComponentProps
 class ViewPlaningAsDeveloperPage extends React.Component<Props> {
   private _interval?: NodeJS.Timeout
   componentDidMount(): void {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { sprintId } = this.props.match.params as any
     window.localStorage.setItem(constants.SPRINT_ID_KEY, sprintId)
 
@@ -43,11 +45,17 @@ class ViewPlaningAsDeveloperPage extends React.Component<Props> {
       return <div>Loading...</div>
     }
     return (
-      <div>
+      <div className={'developer-page'}>
         <StoryList />
         <ActiveStory />
       </div>
     )
+  }
+}
+
+const mapStateToProps = (state: RootState): StateProps => {
+  return {
+    sprint: state.SprintReducer.sprint
   }
 }
 
@@ -60,4 +68,4 @@ const mapDispatchToProps = (dispatch: Redux.Dispatch): DispatchProps => {
   )
 }
 
-export default withRouter(connect(null, mapDispatchToProps)(ViewPlaningAsDeveloperPage))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ViewPlaningAsDeveloperPage))

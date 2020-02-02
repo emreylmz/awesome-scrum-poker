@@ -18,9 +18,12 @@
   .voters-container {
     display: flex;
     align-self: stretch;
+    flex-direction: column;
+    flex: 1;
 
     .voter-line {
       display: flex;
+      margin: 5px;
       align-items: center;
 
       .voter-name {
