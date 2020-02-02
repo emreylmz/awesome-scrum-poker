@@ -1,0 +1,14 @@
+.scrum-master-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .invite-link-container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__container {
+    display: flex;
+  }
+}

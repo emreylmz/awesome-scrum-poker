@@ -1,0 +1,25 @@
+@import "../../styles/colors";
+
+.invite-link {
+  display: flex;
+  align-items: flex-end;
+  font-size: 12px;
+  align-self: flex-start;
+  flex: 1;
+
+  &__info {
+    flex: 1;
+  }
+
+  &__url {
+    flex: 2;
+    display: inline-block;
+    color: $secondary-color;
+    background-color: $text-color;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+}

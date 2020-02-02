@@ -1,0 +1,30 @@
+@import "../../styles/colors";
+@import "../../styles/metrics";
+
+.story-list {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  border: $default-border-width solid $primary-color;
+  padding: $default-margin;
+  border-radius: $default-border-radius;
+  margin: $default-margin;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    font-weight: bold;
+    padding: $default-margin;
+    border-bottom: $default-border-width solid $gray-color;
+
+    &-title {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  &__stories {
+
+  }
+}

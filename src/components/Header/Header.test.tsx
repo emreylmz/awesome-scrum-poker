@@ -1,19 +1,27 @@
+import { shallow, ShallowWrapper } from 'enzyme'
 import React from 'react'
-import renderer from 'react-test-renderer'
+import '../../testUtils/setupTests'
+import Header, { HeaderProps } from './Header'
 
-import Header from './Header'
+type DoneCallback = jest.DoneCallback
 
-describe('Header', () => {
-  it('should render correctly', () => {
-    const component = renderer.create(<Header />)
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+const defaultTitle = 'My Header'
+
+const getWrapper = (props?: HeaderProps): ShallowWrapper => {
+  return shallow(<Header title={defaultTitle} {...props} />)
+}
+
+describe('Header UI', () => {
+  it('should render correctly', (done: DoneCallback) => {
+    const wrapper = getWrapper()
+    expect(wrapper).toMatchSnapshot()
+    done()
   })
 
-  it('should have title', () => {
-    const root = renderer.create(<Header />).root
-    const img = root.findByType('h1')
-    expect(img).toBeDefined()
-    expect(img.props.className.includes('title')).toBeTruthy()
+  it('should have title', (done: DoneCallback) => {
+    const wrapper = getWrapper()
+    const titleWrapper = wrapper.find('.header__title')
+    expect(titleWrapper.text()).toEqual(defaultTitle)
+    done()
   })
 })

@@ -1,0 +1,12 @@
+@import "../../styles/colors";
+@import "../../styles/metrics";
+
+.header {
+  flex: 1;
+  align-items: flex-start;
+  height: 100px;
+  margin: $default-margin;
+  &__title {
+    color: $primary-color
+  }
+}

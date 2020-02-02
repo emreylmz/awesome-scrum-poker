@@ -1,0 +1,22 @@
+@import "../../styles/colors";
+@import "../../styles/metrics";
+
+.labeled-text-area {
+  display: flex;
+  flex-direction: column;
+  flex: 0;
+  align-content: center;
+
+  &__label {
+    margin: $default-margin;
+  }
+  textarea {
+    margin: 0 $default-margin;
+    height: 200px;
+    font-size: 18px;
+    padding: $default-margin;
+    background-color: aliceblue;
+    color: $primary-color;
+    border-radius: $default-border-radius;
+  }
+}
